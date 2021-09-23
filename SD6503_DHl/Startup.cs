@@ -30,6 +30,9 @@ namespace SD6503_DHl
 
             services.AddMvc();
 
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+
             var connection = @"Server=(localdb)\MSSQLLocalDB;Database=DhlDatabase;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<DhlDatabaseContext>(options => options.UseSqlServer(connection));
         }
@@ -49,6 +52,7 @@ namespace SD6503_DHl
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 
