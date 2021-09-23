@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD6503_DHl", "SD6503_DHl\SD6503_DHl.csproj", "{6988C636-A4C6-42F0-AB8F-A8E3D9F5EAB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SD6503_DHl", "SD6503_DHl\SD6503_DHl.csproj", "{6988C636-A4C6-42F0-AB8F-A8E3D9F5EAB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHL_TestProject", "DHL_TestProject\DHL_TestProject.csproj", "{264813D7-9A8D-4B89-A913-443633E7090C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6988C636-A4C6-42F0-AB8F-A8E3D9F5EAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6988C636-A4C6-42F0-AB8F-A8E3D9F5EAB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6988C636-A4C6-42F0-AB8F-A8E3D9F5EAB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{264813D7-9A8D-4B89-A913-443633E7090C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264813D7-9A8D-4B89-A913-443633E7090C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264813D7-9A8D-4B89-A913-443633E7090C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264813D7-9A8D-4B89-A913-443633E7090C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
