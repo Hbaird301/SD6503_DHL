@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using SD6503_DHl.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace SD6503_DHl
 {
     public class Startup
@@ -23,7 +26,15 @@ namespace SD6503_DHl
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            //services.AddControllersWithViews();
+
+            services.AddMvc();
+
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+
+            var connection = @"Server=(localdb)\MSSQLLocalDB;Database=DhlDatabase;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<DhlDatabaseContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +52,7 @@ namespace SD6503_DHl
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 
